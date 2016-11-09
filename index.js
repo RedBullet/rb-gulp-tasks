@@ -1,0 +1,13 @@
+export {default as build} from './tasks/build';
+export {default as clean} from './tasks/clean';
+export {default as copy} from './tasks/copy';
+export {default as scripts} from './tasks/scripts';
+export {default as styles} from './tasks/styles';
+export {default as images} from './tasks/images';
+export {default as browserSync} from './tasks/browser-sync';
+export {default as scssLint} from './tasks/scss-lint';
+export {default as phpLint} from './tasks/php-lint';
+export {default as phpCs} from './tasks/php-cs';
+export {default as esLint} from './tasks/eslint';
+export {default as rev} from './tasks/rev';
+export {default as visualRegression} from './tasks/visual-regression';

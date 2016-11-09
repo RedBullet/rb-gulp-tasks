@@ -1,0 +1,16 @@
+{
+  "name": "rb-gulp-tasks",
+  "version": "1.0.0",
+  "description": "Collection of commonly used build tasks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/simonlewisjones/rb-gulp-tasks.git"
+  },
+  "author": "Red Bullet",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/simonlewisjones/rb-gulp-tasks#readme",
+}
