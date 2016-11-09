@@ -38,8 +38,6 @@ config.images = {
 
 const copySrc = [
   `${src}/**/*`,
-  `!${src}/components/**/*.js`,
-  `!${src}/components/**/*.scss`,
   `!${src}/styles{,/**}`,
   `!${src}/scripts{,/**}`,
   `!${src}/images{,/**}`,
@@ -66,7 +64,7 @@ config.sasslint = {
 };
 
 config.eslint = {
-  src: [`${src}/scripts/**/*.js`, 'gulpfile.babel.js/**/*.js', `${src}/components/**/*.js`],
+  src: [`${src}/scripts/**/*.js`],
 };
 
 config.phplint = {
@@ -102,10 +100,6 @@ config.rev = {
     dontRenameFile: revSkip,
     dontUpdateReference: revSkip,
   },
-};
-
-config.visualRegression = {
-  backstopGulp: 'node_modules/backstopjs/gulpfile.js',
 };
 
 export default config;
