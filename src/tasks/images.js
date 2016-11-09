@@ -4,7 +4,7 @@ import cache from 'gulp-cache';
 import imagemin from 'gulp-imagemin';
 import gulpUtil from 'gulp-util';
 
-export default (config) => {
+export const imagesTask = (config) => {
   gulp.task('images', () => {
     return gulp.src(config.images.src)
       .pipe(gulpIf(gulpIf.isFile, cache(imagemin(config.images.imagemin))

@@ -4,7 +4,7 @@ import vinylPaths from 'vinyl-paths';
 import filter from 'gulp-filter';
 import del from 'del';
 
-export default (config) => {
+export const revTask = (config) => {
   gulp.task('rev', () => {
     const revAll = new RevAll(config.rev.options);
     const preFiles = vinylPaths();

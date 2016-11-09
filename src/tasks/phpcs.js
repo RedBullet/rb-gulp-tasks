@@ -1,8 +1,8 @@
 import gulp from 'gulp';
 import phpcs from 'gulp-phpcs';
 
-export default (config) => {
-  gulp.task('php-cs', () => {
+export const phpcsTask = (config) => {
+  gulp.task('phpcs', () => {
     return gulp.src(config.phpcs.src)
       .pipe(phpcs(config.phpcs.options))
       .pipe(phpcs.reporter('log'))

@@ -13,7 +13,7 @@ function handleError(err) {
   this.emit('end');
 }
 
-function stylesheets(dev) {
+function stylesheets(config, dev) {
   const processors = [cssnext(config.styles.cssnext)];
 
   if (!dev) {
@@ -30,7 +30,7 @@ function stylesheets(dev) {
     .pipe(gulp.dest(config.styles.dest));
 }
 
-export default (config) => {
-  gulp.task('styles:dev', stylesheets.bind(null, true));
-  gulp.task('styles:prod', stylesheets.bind(null, false));
+export const stylesTask = (config) => {
+  gulp.task('styles:dev', stylesheets.bind(null, config, true));
+  gulp.task('styles:prod', stylesheets.bind(null, config, false));
 }

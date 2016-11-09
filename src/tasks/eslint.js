@@ -1,7 +1,7 @@
 import gulp from 'gulp';
 import eslint from 'gulp-eslint';
 
-export default (config) => {
+export const eslintTask = (config) => {
   gulp.task('eslint', () => {
     return gulp.src(config.eslint.src)
       .pipe(eslint())

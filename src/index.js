@@ -1,3 +1,12 @@
-import build from './tasks/build';
-
-export default { build };
+export { buildTask as build } from './tasks/build';
+export { cleanTask as clean } from './tasks/clean';
+export { copyTask as copy } from './tasks/copy';
+export { scriptsTask as scripts } from './tasks/scripts';
+export { stylesTask as styles } from './tasks/styles';
+export { imagesTask as images } from './tasks/images';
+export { browserSyncTask as browserSync } from './tasks/browser-sync';
+export { sasslintTask as sasslint } from './tasks/sasslint';
+export { phplintTask as phplint } from './tasks/phplint';
+export { phpcsTask as phpcs } from './tasks/phpcs';
+export { eslintTask as eslint } from './tasks/eslint';
+export { revTask as rev } from './tasks/rev';

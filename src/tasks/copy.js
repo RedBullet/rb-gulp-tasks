@@ -1,7 +1,7 @@
 import gulp from 'gulp';
 import changed from 'gulp-changed';
 
-export default (config) => {
+export const copyTask = (config) => {
   gulp.task('copy', () => {
     return gulp.src(config.copy.src)
       .pipe(changed(config.copy.dest))

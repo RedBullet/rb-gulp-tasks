@@ -1,7 +1,7 @@
 import gulp from 'gulp';
 import runSequence from 'run-sequence';
 
-export default (config) => {
+export const buildTask = (config) => {
   gulp.task('build:dev', (callback) => {
     runSequence('clean', ['copy', 'scripts:dev', 'styles:dev', 'images'], callback);
   });
