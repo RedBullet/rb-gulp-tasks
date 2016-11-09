@@ -1,1 +1,1 @@
-WIP. Library of common gulp tasks we use across our in-house projects at [Redbullet](http://redbullet.co.uk).
+WIP. Library of common gulp tasks we use across our in-house projects at [Red Bullet](http://redbullet.co.uk).
