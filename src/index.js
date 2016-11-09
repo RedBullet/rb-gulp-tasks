@@ -10,6 +10,8 @@ export { phplintTask as phplint } from './tasks/phplint';
 export { phpcsTask as phpcs } from './tasks/phpcs';
 export { eslintTask as eslint } from './tasks/eslint';
 export { revTask as rev } from './tasks/rev';
+export { visualRegressionTask as visualRegression } from './tasks/visual-regression';
 export { defaultTask as default } from './tasks/default';
 export { serveTask as serve } from './tasks/serve';
 export { lintTask as lint } from './tasks/lint';
+export { testTask as test } from './tasks/test';

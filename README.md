@@ -1,1 +1,1 @@
-Library of common gulp tasks that can be imported into individual projects. WIP.
+WIP. Library of common gulp tasks we use across our in-house projects at [Redbullet](http://redbullet.co.uk).
