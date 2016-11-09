@@ -10,4 +10,3 @@ export {default as phplint} from './tasks/php-lint';
 export {default as phpcs} from './tasks/php-cs';
 export {default as eslint} from './tasks/eslint';
 export {default as rev} from './tasks/rev';
-export {default as visualRegression} from './tasks/visual-regression';
