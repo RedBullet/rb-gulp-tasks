@@ -11,13 +11,13 @@ import sourcemaps from 'gulp-sourcemaps';
 import eventStream from 'event-stream';
 import envify from 'loose-envify/custom';
 
-function applyEnv(bundle, dev = false) {
+export function applyEnv(bundle, dev = false) {
   return bundle.transform(envify(
     { NODE_ENV: (dev ? 'development' : 'production') }
   ), { global: true });
 }
 
-function scriptsStream(config, bundlerArr, dev = false, shouldThrow = true) {
+export function scriptsStream(config, bundlerArr, dev = false, shouldThrow = true) {
   const tasks = bundlerArr.map(bundler => {
     return bundler.bundle
       .bundle()
@@ -37,22 +37,26 @@ function scriptsStream(config, bundlerArr, dev = false, shouldThrow = true) {
   return eventStream.merge.apply(null, tasks);
 }
 
-function bundleScripts(config, bundlerArr, dev = false, shouldThrow = true) {
+export function bundleScripts(config, bundlerArr, dev = false, shouldThrow = true) {
   const updatedBundlerArr = bundlerArr.map(bundler => {
     return { ...bundler, bundle: applyEnv(bundler.bundle, dev) };
   });
   return scriptsStream(config, updatedBundlerArr, dev, shouldThrow);
 }
 
-export const scriptsTask = (config) => {
+export function createBundlers(config) {
   const scripts = config.scripts.paths;
 
-  const bundlers = scripts.map(script => {
+  return scripts.map(script => {
     return {
       bundle: browserify(path.join(config.src, script), { debug: true }).transform(babelify),
       script,
     };
   });
+}
+
+export const scriptsTask = (config) => {
+  const bundlers = createBundlers(config);
 
   gulp.task('scripts:dev', bundleScripts.bind(null, config, bundlers, true));
   gulp.task('scripts:prod', bundleScripts.bind(null, config, bundlers, false));
