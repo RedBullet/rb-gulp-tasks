@@ -9,11 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/simonlewisjones/rb-gulp-tasks.git"
+    "url": "https://github.com/redbullet/rb-gulp-tasks.git"
   },
   "author": "Red Bullet",
   "license": "ISC",
-  "homepage": "https://github.com/simonlewisjones/rb-gulp-tasks",
+  "homepage": "https://github.com/redbullet/rb-gulp-tasks",
   "dependencies": {
     "babel-cli": "^6.18.0",
     "babel-plugin-transform-object-rest-spread": "^6.16.0",
