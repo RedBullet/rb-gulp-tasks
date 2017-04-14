@@ -16,6 +16,7 @@ config.styles = {
     browsers: '> 1%',
     warnForDuplicates: false,
   },
+  cssnano: {},
   sass: {
     includePaths: 'node_modules',
   },
