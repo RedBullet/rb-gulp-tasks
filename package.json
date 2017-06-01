@@ -1,6 +1,6 @@
 {
   "name": "rb-gulp-tasks",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Library of commonly used build tasks",
   "main": "lib/index.js",
   "scripts": {
