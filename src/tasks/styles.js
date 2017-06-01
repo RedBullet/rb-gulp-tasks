@@ -17,7 +17,7 @@ function stylesheets(config, dev) {
   const processors = [cssnext(config.styles.cssnext)];
 
   if (!dev) {
-    processors.push(cssnano());
+    processors.push(cssnano(config.styles.cssnano ? config.styles.cssnano : {}));
   }
 
   return gulp.src(config.styles.src)
